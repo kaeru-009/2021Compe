@@ -1,5 +1,9 @@
 sceneSetups:
-- path: Assets/ZAHA/Stage1.unity
+<<<<<<< HEAD
+- path: Assets/Ando/Ball Stage.unity
+=======
+- path: Assets/Shuuto/ShuutoCamera.unity
+>>>>>>> c43d953e45d3b3a6bb649cf1bdfa2c984beaf6f7
   isLoaded: 1
   isActive: 1
   isSubScene: 0
