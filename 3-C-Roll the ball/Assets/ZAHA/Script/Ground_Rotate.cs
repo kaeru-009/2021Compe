@@ -37,6 +37,8 @@ public class Ground_Rotate : MonoBehaviour
         freamCount++;//フレームカウント
         float time = Time.realtimeSinceStartup - prevTime;//ゲームスタートした経過時間
 
+
+        Debug.Log(time);
         Horizontal = Input.GetAxis("Horizontal");
         Vertical = Input.GetAxis("Vertical");
 
