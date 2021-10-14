@@ -64,10 +64,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Ando\rigidbody.cs" />
     <Compile Include="Assets\ZAHA\Script\Ground_Rotate.cs" />
     <Compile Include="Assets\ZAHA\Script\Player_Controller.cs" />
     <Reference Include="Unity.Timeline.Editor">
-<<<<<<< HEAD
       <HintPath>D:/Roll the ball/3-C-Roll the ball/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
@@ -93,33 +93,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/Roll the ball/3-C-Roll the ball/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-=======
-      <HintPath>C:/Users/崎濱秀人/Desktop/2021コンペティション/3-C-Roll the ball/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/崎濱秀人/Desktop/2021コンペティション/3-C-Roll the ball/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/崎濱秀人/Desktop/2021コンペティション/3-C-Roll the ball/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/崎濱秀人/Desktop/2021コンペティション/3-C-Roll the ball/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/崎濱秀人/Desktop/2021コンペティション/3-C-Roll the ball/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/崎濱秀人/Desktop/2021コンペティション/3-C-Roll the ball/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/崎濱秀人/Desktop/2021コンペティション/3-C-Roll the ball/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/崎濱秀人/Desktop/2021コンペティション/3-C-Roll the ball/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/崎濱秀人/Desktop/2021コンペティション/3-C-Roll the ball/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
->>>>>>> c43d953e45d3b3a6bb649cf1bdfa2c984beaf6f7
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
