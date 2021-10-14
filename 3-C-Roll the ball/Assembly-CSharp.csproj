@@ -64,13 +64,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Assets\Ando\script\rigidbody.cs" />
+=======
+    <Compile Include="Assets\Ando\rigidbody.cs" />
+>>>>>>> aeb9250d52f107e888ea0c97969fbc0556558a39
     <Compile Include="Assets\Hideto\script\S_coin.cs" />
     <Compile Include="Assets\Hideto\script\control.cs" />
     <Compile Include="Assets\ZAHA\Script\Ground_Rotate.cs" />
     <Compile Include="Assets\ZAHA\Script\Player_Controller.cs" />
     <Reference Include="Unity.Timeline.Editor">
+<<<<<<< HEAD
       <HintPath>D:/Roll the ball/3-C-Roll the ball/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+=======
+      <HintPath>D:/C_Compe2021/3-C-Roll the ball/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+>>>>>>> aeb9250d52f107e888ea0c97969fbc0556558a39
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/Roll the ball/3-C-Roll the ball/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
@@ -94,7 +102,11 @@
       <HintPath>D:/Roll the ball/3-C-Roll the ball/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
+<<<<<<< HEAD
       <HintPath>D:/Roll the ball/3-C-Roll the ball/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+=======
+      <HintPath>D:/C_Compe2021/3-C-Roll the ball/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+>>>>>>> aeb9250d52f107e888ea0c97969fbc0556558a39
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
