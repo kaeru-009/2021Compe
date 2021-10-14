@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Ando/Ball Stage.unity
+=======
+- path: Assets/ZAHA/Stage1.unity
+>>>>>>> 4795545fdda87cb936d646db396d4a1ad9e191ed
   isLoaded: 1
   isActive: 1
   isSubScene: 0

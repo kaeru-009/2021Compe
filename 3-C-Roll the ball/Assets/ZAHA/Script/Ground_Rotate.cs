@@ -6,29 +6,111 @@ public class Ground_Rotate : MonoBehaviour
 {
     private float Horizontal;
     private float Vertical;
-    private float speed;
+
+    private float RotateV;
+    private float RotateH;
+
+    [SerializeField]private float backVal_V;
+    [SerializeField]private float backVal_H;
+
+
+    //FPS管理
+    int freamCount;
+    float prevTime;
+    float fps;
+
     // Start is called before the first frame update
     void Start()
     {
-        speed = 1;
+        freamCount = 0;
+        prevTime = 0.0f;
+
+        Application.targetFrameRate = 60;//フレーム変更
+        backVal_V = 0.5f;
+        backVal_H = 0.5f;
     }
+
 
     // Update is called once per frame
     void Update()
     {
+        freamCount++;//フレームカウント
+        float time = Time.realtimeSinceStartup - prevTime;//ゲームスタートした経過時間
+
+
+        Debug.Log(time);
         Horizontal = Input.GetAxis("Horizontal");
         Vertical = Input.GetAxis("Vertical");
 
-        transform.Rotate(new Vector3(Vertical * speed, 0,  Horizontal * speed));
-
-        if(gameObject.transform.localEulerAngles.x >= 30.0f)
+        //入力されているか
+        if (Horizontal != 0 || Vertical != 0)//入力されてたら
         {
-            transform.Rotate(new Vector3(30, 0,0));
+            
+            if (Horizontal > 0) //(水平)右入力
+            {
+                RotateH += 0.5f;
+            }else if (Horizontal < 0) //(水平)左入力
+            {
+                RotateH -= 0.5f;
+            }
+
+            if (Vertical > 0)//(垂直) 上入力
+            {
+                RotateV += 0.5f;
+            }
+            else if (Vertical < 0)//(垂直) 下入力
+            {
+                RotateV -= 0.5f;
+            }
+
+            //回転移動制御
+
+            //垂直
+            if (RotateV > 30)//正 
+            {
+                RotateV = 30;
+            }else if(RotateV < -30)//負
+            {
+                RotateV = -30;
+            }
+
+            //水平
+            if (RotateH > 30)//正
+            {
+                RotateH = 30;
+            }else if (RotateH < -30)//負
+            {
+                RotateH = -30;
+            }
+            
         }
-        if (gameObject.transform.localEulerAngles.z >= 30.0f)
+        else//入力されていない時
         {
-            transform.Rotate(new Vector3(0, 0, 30));
+            //入力されていない時かつ戻す量が0になってない時
+            if (RotateH != 0 || RotateV != 0) {
+                if (RotateH > 0)
+                {
+                    RotateH -= backVal_H;
+                }
+                else if (RotateH < 0)
+                {
+                    RotateH += backVal_H;
+                }
+
+                if (RotateV > 0)
+                {
+                    RotateV -= backVal_V;
+                }
+                else if (RotateV < 0)
+                {
+                    RotateV += backVal_V;
+                }
+            }
+
+            Debug.Log(RotateH);
         }
 
+        Quaternion rotate = Quaternion.Euler(RotateV, 0, -RotateH);
+        this.transform.rotation = rotate;
     }
 }
