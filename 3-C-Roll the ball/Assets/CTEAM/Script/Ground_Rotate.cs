@@ -4,30 +4,26 @@ using UnityEngine;
 
 public class Ground_Rotate : MonoBehaviour
 {
-    private float Horizontal;
-    private float Vertical;
+    private float Horizontal;//水平
+    private float Vertical;//垂直
 
-    private float RotateV;
-    private float RotateH;
+    private float RotateV;//回転垂直
+    private float RotateH;//回転水平
 
-    private float katamuki_move_V;
-    private float katamuki_move_H;
-    private float bauck_move_V;
-    private float bauck_move_H;
+    private float katamuki_move_V;//傾ける量　垂直
+    private float katamuki_move_H;//傾ける量　水平
 
-    //FPS管理
-    int freamCount;
-    float prevTime;
-    float fps;
+    private float bauck_move_V;//戻す量 垂直
+    private float bauck_move_H;//戻す量 水平
 
     // Start is called before the first frame update
     void Start()
     {
         Application.targetFrameRate = 60;//フレーム変更
-        bauck_move_V = 0.5f;
-        bauck_move_H = 0.5f;
-        katamuki_move_V = 0.3f;
-        katamuki_move_H = 0.3f;
+        bauck_move_V = 0.5f;// 1/60
+        bauck_move_H = 0.5f;// 1/60
+        katamuki_move_V = 0.3f;// 1/90
+        katamuki_move_H = 0.3f;// 1/90
     }
 
 
@@ -84,30 +80,52 @@ public class Ground_Rotate : MonoBehaviour
         }
         else//入力されていない時
         {
-            //入力されていない時かつ戻す量が0になってない時
-            if (RotateH != 0 || RotateV != 0)
+            //戻す量が1より多い時
+            if (RotateH > 1)
             {
-                if (RotateH > 0)
+                //水平方向
+                if (RotateH > 0)//左に戻す
                 {
                     RotateH -= bauck_move_H;
                 }
-                else if (RotateH < 0)
+            }
+            else if (RotateH < -1)
+            {
+                if (RotateH < 0)//右に戻す
                 {
                     RotateH += bauck_move_H;
                 }
+            }
+            else
+            {
+                RotateH = 0;//戻す量を0にする
+            }
 
+
+            //戻す量が1より多い間
+            if (RotateV > 1)
+            {
+                //垂直方向
                 if (RotateV > 0)
                 {
-                    RotateV -= bauck_move_V;
-                }
-                else if (RotateV < 0)
-                {
-                    RotateV += bauck_move_V;
+                    RotateV -= bauck_move_V;//左に戻す
                 }
             }
+            else if (RotateV < -1)
+            {//戻す量が -1より小さい時
+                if (RotateV < 0)
+                {
+                    RotateV += bauck_move_V;//右に戻す
+                }
+            }
+            else
+            {
+                RotateV = 0;//戻す量を0にする
+            }
+
         }
 
-        Quaternion rotate = Quaternion.Euler(RotateV, 0, -RotateH);
-        this.transform.rotation = rotate;
+        Quaternion rotate = Quaternion.Euler(RotateV, 0, -RotateH);///回転を生成
+        this.transform.rotation = rotate;//回転を更新
     }
 }
